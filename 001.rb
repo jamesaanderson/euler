@@ -1,7 +1,1 @@
-sum = 0
-1000.times do |i|
-  if i % 3 == 0 || i % 5 == 0
-    sum += i
-  end
-end
-puts sum # => 233168
+puts (1...1000).select { |i| i % 3 == 0 || i % 5 == 0 }.reduce(:+) # => 233168
